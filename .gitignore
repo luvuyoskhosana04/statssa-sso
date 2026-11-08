@@ -1,0 +1,25 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.testing.example
+*.pem
+*.key
+*.p12
+*.pfx
+# Installed dependencies
+node_modules/
+laravel/vendor/
+# Runtime data
+laravel/storage/
+laravel/public/uploads/
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+# Local tools and OS metadata
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.pyc

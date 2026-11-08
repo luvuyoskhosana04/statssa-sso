@@ -1,0 +1,19 @@
+SSO export validation, 8 November 2026
+
+RoleLoginTest: 18 passed, 96 assertions.
+Runtime: existing application container, isolated statssa_role_tests database.
+APP_ENV=testing, APP_CONFIG_CACHE=/tmp/statssa-sso-test-config.php (absent),
+SESSION_DRIVER=array, CACHE_DRIVER=array. Production cached configuration bypassed.
+
+Integration patch: checked and applied in a temporary index against the recorded
+upstream commit. Resulting bytes match all 16 exported Laravel files.
+Static preview: all image and stylesheet references resolve inside the package.
+Browser: images load, bronze action is #996735, Arial theme is active,
+support mailto destination matches, Skip intro restores the usable form,
+and the preview-only submit displays its message without authentication.
+CSS parser: no top-level parse errors in both stylesheets.
+Export check: no wider .ui-refresh system styles in welcome-theme.css.
+Archive excludes local environment files, database files, uploads, logs,
+private keys, dependency folders and Git history. Known secret patterns scan clean.
+The scan is a packaging check, not a full security audit or SSO provider certification.
+No source changes or commits were made to the application during packaging.

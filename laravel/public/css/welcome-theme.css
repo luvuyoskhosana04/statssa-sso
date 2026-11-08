@@ -1,0 +1,76 @@
+/* Stats SA sign-in theme. Scoped to the welcome page. */
+:root {
+    --stats-sand-50:#fcfbf7;
+    --stats-sand-200:#efe7d5;
+    --stats-sand-300:#e2d7bf;
+    --stats-sand-400:#d2c3a3;
+    --stats-sand-500:#b9a783;
+    --stats-sand-700:#7d6d4f;
+    --stats-sand-800:#60543f;
+    --stats-stone-100:#f5f4f0;
+    --stats-stone-200:#e7e5df;
+    --stats-stone-500:#938f84;
+    --stats-stone-600:#767268;
+    --stats-stone-700:#5c5952;
+    --stats-terracotta-700:#79493f;
+    --stats-font:Arial,"Helvetica Neue",sans-serif;
+    --ui-primary-button:#996735;
+    --ui-primary-button-hover:#86582d;
+    --ui-primary-button-pressed:#734b27;
+}
+.stats-sa-welcome {
+    --ink:#30312e;--muted:var(--stats-stone-700);--line:var(--stats-stone-500);
+    background:#fff;color:var(--ink);font-family:var(--stats-font);
+}
+.stats-sa-welcome .page-shell::before,.stats-sa-welcome .page-shell::after {border-color:var(--stats-stone-100)}
+.stats-sa-welcome .welcome-header {gap:24px}
+.stats-sa-welcome h1 {font-family:var(--stats-font);font-size:48px;line-height:56px;letter-spacing:-1.5px;font-weight:700}
+.stats-sa-welcome .platform-name {font-weight:400;letter-spacing:-1.5px}
+.stats-sa-welcome .welcome-intro {font-size:28px;line-height:36px;letter-spacing:-.5px;font-weight:400;margin-bottom:16px}
+.stats-sa-welcome .welcome-description {font-size:17px;line-height:26px;margin-block:24px 32px}
+.stats-sa-welcome .heading-orbit {background:var(--stats-sand-200)}
+.stats-sa-welcome .heading-orbit::after {border-color:var(--stats-sand-700)}
+.stats-sa-welcome :is(.header-note,.welcome-footer,.role-hint) {color:var(--muted)}
+.stats-sa-welcome .role-form label {color:var(--ink);font-weight:700}
+.stats-sa-welcome select {border-color:var(--line);border-radius:8px;color:var(--ink)}
+.stats-sa-welcome select:has(option[value=""]:checked) {color:var(--stats-stone-600)}
+.stats-sa-welcome select:hover {border-color:var(--stats-sand-700)}
+.stats-sa-welcome .select-wrap::after {border-color:var(--stats-sand-800)}
+.stats-sa-welcome .sign-in-button {background:var(--stats-sand-300);color:var(--ink);border:1px solid var(--stats-sand-500);border-radius:8px;font-weight:700}
+.stats-sa-welcome .sign-in-button:hover {background:var(--stats-sand-400)}
+.stats-sa-welcome .sign-in-button:active {background:var(--stats-sand-500)}
+.stats-sa-welcome .sign-in-button:disabled {background:var(--stats-stone-200);border-color:var(--stats-stone-200);color:var(--stats-stone-600);opacity:1}
+.stats-sa-welcome :is(select,button,.skip-link):focus-visible {outline:2px solid var(--stats-sand-700);outline-offset:3px}
+.stats-sa-welcome .role-error {color:var(--stats-terracotta-700)}
+.stats-sa-welcome select[aria-invalid=true] {border-color:var(--stats-terracotta-700)}
+.stats-sa-welcome .skip-link {border-color:var(--stats-sand-700);color:var(--stats-sand-800)}
+.stats-sa-welcome .reveal-skip {border-color:var(--stats-stone-500);color:var(--stats-stone-700);border-radius:8px}
+.stats-sa-welcome .reveal-skip:hover {background:var(--stats-sand-50)}
+.stats-sa-welcome.welcome-intro-playing {background:var(--stats-stone-100)}
+@media (max-width:767px) {
+.stats-sa-welcome h1 {font-size:48px;line-height:56px}
+.stats-sa-welcome .welcome-intro {font-size:26px;line-height:32px}
+}
+@media (max-width:380px) {
+.stats-sa-welcome h1 {font-size:44px;line-height:52px}
+}
+@media (forced-colors:active) {
+.stats-sa-welcome :is(select,button,.skip-link):focus-visible {outline-color:Highlight!important}
+}
+.stats-sa-welcome .sign-in-button {background:var(--ui-primary-button);color:#fff;border:0}
+.stats-sa-welcome .sign-in-button:hover {background:var(--ui-primary-button-hover)}
+.stats-sa-welcome .sign-in-button:active {background:var(--ui-primary-button-pressed)}
+.stats-sa-welcome h1 .solution-name {font-size:clamp(28px,2.5vw,36px);line-height:1.25;letter-spacing:-.8px;font-weight:700;margin-top:8px;max-width:470px;text-wrap:balance}
+@media (max-width:760px) {
+.stats-sa-welcome h1 .solution-name {font-size:clamp(27px,5.2vw,34px);max-width:540px}
+}
+.stats-sa-welcome .official-logo {width:230px;height:auto}
+@media (max-width:760px) {
+.stats-sa-welcome .official-logo {width:164px}
+}
+.stats-sa-welcome .welcome-intro .platform-name {display:inline;font-size:inherit;line-height:inherit;font-weight:400;letter-spacing:inherit;color:#996735;white-space:nowrap}
+.stats-sa-welcome .welcome-intro {font-size:clamp(24px,2.1vw,30px);letter-spacing:-.7px}
+@media (max-width:760px) {
+.stats-sa-welcome .welcome-intro {font-size:clamp(21px,4.5vw,28px)}
+}
+.stats-sa-welcome .solution-name .solution-word {font-weight:400}

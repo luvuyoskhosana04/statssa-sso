@@ -1,0 +1,33 @@
+{
+  "prepared": "2026-11-08",
+  "scope": "Stats SA sign-in UI, hand animation, local role-selection login",
+  "base_commit": "8d10063af98aff0e3d5bb40aa56e6c5d732b5181",
+  "upstream": "https://github.com/grokability/snipe-it.git",
+  "export_adjustment": "Shared system stylesheet replaced only in the export with a sign-in-scoped welcome-theme.css. Original application is unchanged.",
+  "backend": "Local role-selection demo, not external SAML/OIDC SSO",
+  "source_files": [
+    "app/Http/Controllers/Auth/LoginController.php",
+    "config/auth.php",
+    "resources/views/layouts/welcome.blade.php",
+    "resources/views/auth/role-login.blade.php",
+    "resources/views/auth/partials/welcome-intro.blade.php",
+    "resources/views/auth/partials/welcome-intro-script.blade.php",
+    "resources/lang/en-US/auth/role-login.php",
+    "public/css/welcome.css",
+    "public/img/stats-sa-logo.png",
+    "public/img/welcome-assets.png",
+    "public/img/welcome-hand.png",
+    "public/fonts/Inter-Variable.woff2",
+    "public/fonts/Inter-LICENSE.txt",
+    "public/favicon.ico",
+    "tests/Feature/Auth/RoleLoginTest.php",
+    "public/css/welcome-theme.css"
+  ],
+  "tests": {
+    "suite": "Tests\\Feature\\Auth\\RoleLoginTest",
+    "passed": 18,
+    "assertions": 96,
+    "date": "2026-11-08",
+    "config": "Isolated .env.testing database and non-existent APP_CONFIG_CACHE path; production cached config must not be reused."
+  }
+}
