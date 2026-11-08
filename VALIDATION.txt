@@ -1,3 +1,12 @@
+Current credential sign-in update, 8 November 2026
+
+12 feature tests passed with 49 assertions using an isolated MySQL test database.
+Includes all seven reference roles, missing credentials, wrong passwords, inactive accounts, role-bypass prevention and restricted asset access.
+The welcome animation focus target was updated to the username input.
+Chrome rendering was checked.
+
+Historical initial handover validation follows. Its passwordless role-selector tests describe the superseded export only.
+
 SSO export validation, 8 November 2026
 
 RoleLoginTest: 18 passed, 96 assertions.
