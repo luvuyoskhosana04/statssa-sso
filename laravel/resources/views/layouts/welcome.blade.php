@@ -6,11 +6,11 @@
     <title>{{ trans('auth/role-login.title') }}</title>
     <meta name="theme-color" content="#e2d7bf">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
-    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}?v=9">
-    <link rel="stylesheet" href="{{ asset('css/welcome-theme.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}?v=10">
+    <link rel="stylesheet" href="{{ asset('css/welcome-theme.css') }}?v=28">
 </head>
 <body class="stats-sa-welcome">
-    <a class="skip-link" href="#role">{{ trans('auth/role-login.skip') }}</a>
+    <a class="skip-link" href="#username">{{ trans('auth/role-login.skip') }}</a>
     <div class="page-shell">
         <header class="welcome-header">
             <div class="wordmark">

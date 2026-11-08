@@ -66,3 +66,15 @@ select[aria-invalid="true"]{border-color:#aa2445}
 .welcome-footer .support-link{color:#2563a6;text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:44px}
 .welcome-footer .support-link:hover{color:#1d4e85}
 .welcome-footer .support-link:focus-visible{outline:2px solid #2563a6;outline-offset:4px;border-radius:2px}
+
+/* Credential sign-in retains the welcome screen's visual language. */
+.credential-field{margin-bottom:16px}
+.stats-sa-welcome .credential-field input{display:block;width:100%;min-width:0;height:50px;border:1px solid var(--line);border-radius:8px;padding:0 16px;background:#fff;color:var(--ink);font:inherit;font-size:14px;transition:border-color .2s}
+.stats-sa-welcome .credential-field input::placeholder{color:#87847d;opacity:1}
+.stats-sa-welcome .credential-field input:hover{border-color:#996735}
+.stats-sa-welcome .credential-field input:focus-visible{outline:2px solid #996735;outline-offset:3px}
+.stats-sa-welcome .credential-field input[aria-invalid=true]{border-color:#bc3434}
+.credential-actions{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.credential-actions a{color:#2563a6;font-size:13px;min-height:44px;display:inline-flex;align-items:center;text-underline-offset:3px}
+.credential-actions .sign-in-button{min-width:145px;height:50px}
+@media(max-width:380px){.credential-actions{flex-wrap:wrap}.credential-actions .sign-in-button{width:100%}}

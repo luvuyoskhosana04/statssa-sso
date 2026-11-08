@@ -14,24 +14,27 @@
             <p class="welcome-description">{{ trans('auth/role-login.description') }}</p>
             <form class="role-form" action="{{ route('login') }}" method="POST">
                 @csrf
-                <label for="role">{{ trans('auth/role-login.role') }}</label>
-                <div class="sign-in-controls">
-                    <div class="select-wrap">
-                        <select id="role" name="role" required aria-describedby="role-hint{{ $errors->has('role') ? ' role-error' : '' }}" @if($errors->has('role')) aria-invalid="true" @endif>
-                            <option value="" disabled @selected(! old('role'))>{{ trans('auth/role-login.placeholder') }}</option>
-                            @foreach ($roles as $role)
-                                <option value="{{ $role }}" @selected(old('role') === $role)>{{ trans('auth/role-login.roles.'.$role) }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                <div class="credential-field">
+                    <label for="username">{{ trans('general.username') }}</label>
+                    <input id="username" name="username" type="text" value="{{ old('username') }}" placeholder="{{ trans('auth/role-login.username_example') }}" autocomplete="username" required autocapitalize="none" spellcheck="false" @if($errors->has('username')) aria-invalid="true" aria-describedby="username-error" @endif>
+                    @error('username')
+                        <p class="role-error" id="username-error" role="alert">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="credential-field">
+                    <label for="password">{{ trans('general.password') }}</label>
+                    <input id="password" name="password" type="password" placeholder="{{ trans('auth/role-login.password_placeholder') }}" autocomplete="current-password" required @if($errors->has('password')) aria-invalid="true" aria-describedby="password-error" @endif>
+                    @error('password')
+                        <p class="role-error" id="password-error" role="alert">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="credential-actions">
+                    <a href="{{ $snipeSettings->custom_forgot_pass_url ?: route('password.request') }}">{{ trans('auth/general.forgot_password') }}</a>
                     <button type="submit" class="sign-in-button">
                         <span id="sign-in-label">{{ trans('auth/role-login.sign_in') }}</span>
                         <span class="button-arrow" aria-hidden="true">↗</span>
                     </button>
                 </div>
-                @error('role')
-                    <p class="role-error" id="role-error" role="alert">{{ $message }}</p>
-                @enderror
                 @if (session('error'))
                     <p class="role-error" role="alert">{{ session('error') }}</p>
                 @endif
